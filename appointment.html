@@ -23,7 +23,7 @@
                 </div>
             </div>
         </nav>
-        <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8">
+        <form id="ft-form" method="POST" accept-charset="UTF-8">
             <fieldset>
                 <legend>Patient Information</legend>
                 <div class="item">
@@ -50,7 +50,7 @@
                 <div class="item">
                     <p>Time</p>
                     <select>
-                        <option selected value="" disabled selected></option>
+                        <option selected value="" id="time" disabled selected></option>
                         <option value="m">Morning</option>
                         <option value="a">Afternoon</option>
                         <option value="e">Evening</option>
@@ -60,11 +60,11 @@
                     <label>Preferred Physician</label>
                     <div class="question-answer">
                         <div>
-                            <input type="radio" value="none" id="radio_1" name="physician"/>
+                            <input type="radio" id="radio_1" name="physician"/>
                             <label for="radio_1" class="radio"><span>Dr. Anderson</span></label>
                         </div>
                         <div>
-                            <input  type="radio" value="none" id="radio_3" name="physician"/>
+                            <input  type="radio"  id="radio_3" name="physician"/>
                             <label for="radio_3" class="radio"><span>Dr. Patel</span></label>
                         </div>
                         <div>
@@ -84,7 +84,7 @@
                 <div class="item">
                     <p>Speciality</p>
                     <select>
-                        <option selected value="" disabled selected></option>
+                        <option selected value="" id="special"disabled selected></option>
                         <option value = "General physician">General Physician</option>
                         <option value = "Orthopedics">Orthopedics</option>
                         <option value = "Opthamology">Opthamology</option>
@@ -96,10 +96,68 @@
                 </div>
             </fieldset>
             <div class="btns">
-                <input type="text" name="_gotcha" value="" style="display:none;">
-                <input type="submit" onclick="window.location.href='confirmation.html';"value="Submit">
+                <input id="button" type="button" onclick="onSubmit()" value="Submit"><br><br>
             </div>
         </form>
+
+        <script>
+            function onSubmit() {
+                var username = document.getElementById('email').value;
+                var dob = document.getElementById('bdate').value;
+                var date = document.getElementById('date').value;
+                var time  = document.getElementById('time').value;
+                var doc_name= document.getElementById('radio_1').value;
+                var speciality = document.getElementById('special').value;
+                console.log();
+                console.log(typeof(dob));
+                if(username == "" || date == "" || time == "" ){
+                        alert("FIELDS ARE INCOMPLETE");
+                }
+                else if(doc_name == "" && specilaity == "")
+                {
+                        alert("FIELDS ARE INCOMPLETE");    
+                }
+                else
+                {
+                    const Appointment = {
+                    
+                        username: username,
+                        date: date,
+                        time: time,
+                        doc_name: doc_name,
+                        speciality: speciality
+
+                    };
+                    
+                    const otherParam = {
+                        headers:
+                        {
+                            "content-type":"application/json; charset=UTF-8"
+                        },
+
+                        body: JSON.stringify(Appointment),
+                        method:"POST"
+                        }
+                    console.log(document.getElementById('date'));
+                    console.log(document.getElementById('time'));
+
+                    var valid = false;
+                    fetch("https://localhost:44354/Create", otherParam)
+                    .then(data =>{return data.json()})
+                    .then(res=>{if(res == true)
+                    {
+                        alert("APPOINTMENT ADDED")
+                        window.location.assign("confirmation.html"); 
+                    }
+                    else
+                    {
+                        alert("ERROR!");
+                    }})
+                    .catch(error=>console.log(error))
+                };
+
+            }
+         </script>
     </body>
 </html>
 
