@@ -38,6 +38,10 @@
                             <fieldset>
                                 <legend>Patient Information</legend>
                                 <div class="item">
+                                    <label for="email">Email<span>*</span></label>
+                                    <input id="email" type="email" name="email" required/>
+                                </div>
+                                <div class="item">
                                     <label for="fname"> First Name<span>*</span></label>
                                     <input id="fname" type="text" name="fname" required/>
                                 </div>
@@ -48,10 +52,6 @@
                                 <div class="item">
                                     <label for="lname"> Last Name<span>*</span></label>
                                     <input id="lname" type="text" name="lname" required/>
-                                </div>
-                                <div class="item">
-                                    <label for="email"> Last Name<span>*</span></label>
-                                    <input id="email" type="email" name="email" required/>
                                 </div>
                                 <div class="item">
                                     <label for="phone">Phone number<span>*</span></label>
@@ -104,6 +104,12 @@
                                             <label for="radio_4" class="radio"><span>No preference</span></label>
                                         </div>
                                     </div>
+                                </div>
+                                <div><select name = "dropdown">
+                                    <option value = "General Physician" selected>General Physician</option>
+                                    <option value = "Orthopedics">Orthopedics</option>
+                                    <option value = "Opthamology">Opthamology</option>
+                                 </select>
                                 </div>
                                 <div class="item">
                                     <label for="instructions">Please describe the reason for this visit </label>
