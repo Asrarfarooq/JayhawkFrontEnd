@@ -1,15 +1,5 @@
 <html>
     <body>
-        <link rel="apple-touch-icon" sizes="180x180" href="live-doc-v1.0.0/public/assets/img/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="live-doc-v1.0.0/public/assets/img/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="live-doc-v1.0.0/public/assets/img/favicons/favicon-16x16.png">
-        <link rel="shortcut icon" type="image/x-icon" href="live-doc-v1.0.0/public/assets/img/favicons/favicon.ico">
-        <link rel="manifest" href="live-doc-v1.0.0/public/assets/img/favicons/manifest.json">
-        <meta name="msapplication-TileImage" content="live-doc-v1.0.0/public/assets/img/favicons/mstile-150x150.png">
-        <meta name="theme-color" content="#ffffff">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link href="files/public/assets/css/theme.css" rel="stylesheet" />
         <link href="files/public/assets/css/appointment.css" rel="stylesheet" />
         <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light" data-navbar-on-scroll="data-navbar-on-scroll">
@@ -23,104 +13,82 @@
                 </div>
             </div>
         </nav>
-        <h2>Book Appointment</h2>
-        <section class="py-8">
-            <div class="container">
-                <div class="row">
-                    <div class="bg-holder bg-size" style="background-image:url(files/public/assets/img/gallery/dot-bg.png);background-position:bottom right;background-size:auto;">
-                    </div>
-                    
-                    <div class="testbox">
-                        <form action="/">
-                            <div class="banner">
-                            </div>
-                            <br/>
-                            <fieldset>
-                                <legend>Patient Information</legend>
-                                <div class="item">
-                                    <label for="email">Email<span>*</span></label>
-                                    <input id="email" type="email" name="email" required/>
-                                </div>
-                            
-                                <div class="item">
-                                    <label for="phone">Phone number<span>*</span></label>
-                                    <input id="phone" type="number"   name="phone" required/>
-                                </div>
-                                <div class="item">
-                                    <label for="bdate">Birth Date <span>*</span></label>
-                                    <input id="bdate" type="date" name="bdate" required/>
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                              </fieldset>
-                              <br>
-                              <fieldset>
-                                <legend>Appointment Information</legend>
-                                <div class="item">
-                                    <label for="date">Date<span>*</span></label>
-                                    <input id="date" type="date" name="date" required/>
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                                <div class="item">
-                                    <p>Time</p>
-                                    <select>
-                                        <option selected value="" disabled selected></option>
-                                        <option value="m" >Morning</option>
-                                        <option value="a">Afternoon</option>
-                                        <option value="e">Evening</option>
-                                    </select>
-                                </div>
-                                <div class="question">
-                                    <label>Preferred Physician</label>
-                                    <div class="question-answer">
-                                        <div>
-                                            <input type="radio" value="none" id="radio_1" name="physician"/>
-                                            <label for="radio_1" class="radio"><span>Dr. Anderson</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_3" name="physician"/>
-                                            <label for="radio_3" class="radio"><span>Dr. Patel</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_5" name="physician"/>
-                                            <label for="radio_5" class="radio"><span>Dr. Jones</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_6" name="physician"/>
-                                            <label for="radio_6" class="radio"><span>Dr. Smith</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_4" name="physician"/>
-                                            <label for="radio_4" class="radio"><span>No preference</span></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>Speciality</p>
-                                    <select>
-                                        <option selected value="" disabled selected></option>
-                                        <option value = "General physician">General Physician</option>
-                                        <option value = "Orthopedics">Orthopedics</option>
-                                        <option value = "Opthamology">Opthamology</option>
-                                    </select>
-                                </div>
-            
-                                <div class="item">
-                                    <label for="instructions">Please describe the reason for this visit </label>
-                                    <textarea id="instructions" rows="3"></textarea>
-                                </div>
-                            </fieldset>
-                            <div class="btn-block">
-                                <button type="submit" onclick="window.location.href='confirmation.html';">Submit</button>
- <!--Fix button-->
-                                  </button>
-                            </div>
-                        </form>
+        <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8">
+            <fieldset>
+                <legend>For person</legend>
+                <div class="item">
+                    <label for="email">Email<span>*</span></label>
+                    <input id="email" type="email" name="email" required/>
+                </div>
+                <div class="item">
+                    <label for="phone">Phone number<span>*</span></label>
+                    <input id="phone" type="number"   name="phone" required/>
+                </div>
+                <div class="item">
+                    <label for="bdate">Birth Date <span>*</span></label>
+                    <input id="bdate" type="date" name="bdate" required/>
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Appointment request</legend>
+                <div class="item">
+                    <label for="date">Date<span>*</span></label>
+                    <input id="date" type="date" name="date" required/>
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="item">
+                    <p>Time</p>
+                    <select>
+                        <option selected value="" disabled selected></option>
+                        <option value="m">Morning</option>
+                        <option value="a">Afternoon</option>
+                        <option value="e">Evening</option>
+                    </select>
+                </div>
+                <div class="question">
+                    <label>Preferred Physician</label>
+                    <div class="question-answer">
+                        <div>
+                            <input type="radio" value="none" id="radio_1" name="physician"/>
+                            <label for="radio_1" class="radio"><span>Dr. Anderson</span></label>
+                        </div>
+                        <div>
+                            <input  type="radio" value="none" id="radio_3" name="physician"/>
+                            <label for="radio_3" class="radio"><span>Dr. Patel</span></label>
+                        </div>
+                        <div>
+                            <input  type="radio" value="none" id="radio_5" name="physician"/>
+                            <label for="radio_5" class="radio"><span>Dr. Jones</span></label>
+                        </div>
+                        <div>
+                            <input  type="radio" value="none" id="radio_6" name="physician"/>
+                            <label for="radio_6" class="radio"><span>Dr. Smith</span></label>
+                        </div>
+                        <div>
+                            <input  type="radio" value="none" id="radio_4" name="physician"/>
+                            <label for="radio_4" class="radio"><span>No preference</span></label>
+                        </div>
                     </div>
                 </div>
-                </form>
+                <div class="item">
+                    <p>Speciality</p>
+                    <select>
+                        <option selected value="" disabled selected></option>
+                        <option value = "General physician">General Physician</option>
+                        <option value = "Orthopedics">Orthopedics</option>
+                        <option value = "Opthamology">Opthamology</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="instructions">Please describe the reason for this visit </label>
+                    <textarea id="instructions" rows="3"></textarea>
+                </div>
+            </fieldset>
+            <div class="btns">
+                <input type="text" name="_gotcha" value="" style="display:none;">
+                <input type="submit" value="Submit request">
             </div>
-            </div>
-            </div>
-        </section>
+        </form>
     </body>
 </html>
