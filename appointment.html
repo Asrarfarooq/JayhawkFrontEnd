@@ -25,14 +25,14 @@
         </nav>
         <form action="SEND ADDRESS" id="ft-form" method="POST" accept-charset="UTF-8">
             <fieldset>
-                <legend>For person</legend>
+                <legend>Patient Information</legend>
                 <div class="item">
                     <label for="email">Email<span>*</span></label>
                     <input id="email" type="email" name="email" required/>
                 </div>
                 <div class="item">
                     <label for="phone">Phone number<span>*</span></label>
-                    <input id="phone" type="number"   name="phone" required/>
+                    <input id="phone" type="number" name="phone" required/>
                 </div>
                 <div class="item">
                     <label for="bdate">Birth Date <span>*</span></label>
@@ -97,7 +97,7 @@
             </fieldset>
             <div class="btns">
                 <input type="text" name="_gotcha" value="" style="display:none;">
-                <input type="submit" value="Submit request">
+                <input type="submit" onclick="window.location.href='confirmation.html';"value="Submit">
             </div>
         </form>
     </body>
