@@ -114,6 +114,7 @@
                  var time  = document.getElementById('time').value;
                  var doc_name= document.getElementById('radio_1').value;
                  var speciality = document.getElementById('special').value;
+                 var instructions = documment.getElementById('instructions').value;
                  console.log();
                  console.log(typeof(time));
                  if(username == "" || date == "" || time == "" ){
@@ -131,7 +132,8 @@
                          date: date,
                          time: time,
                          doc_name: doc_name,
-                         speciality: speciality
+                         speciality: speciality,
+                         instructions: instructions
         
                      };
                      
@@ -146,6 +148,7 @@
                          }
                      console.log(document.getElementById('date'));
                      console.log(document.getElementById('time'));
+                     console.log(documment.getElementById('instructions'));
         
                      var valid = false;
                      fetch("https://localhost:44354/Create", otherParam)
@@ -157,7 +160,7 @@
                      }
                      else
                      {
-                         alert("ERROR!");
+                         alert("ERROR! BOOKING NOT SUCESSFUL");
                      }})
                      .catch(error=>console.log(error))
                  };
