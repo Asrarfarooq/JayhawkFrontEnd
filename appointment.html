@@ -12,76 +12,77 @@
         <link href="files/public/assets/css/theme.css" rel="stylesheet" />
         <link href="files/public/assets/css/appointment.css" rel="stylesheet" />
         <main class="main" id="top">
-        <nav class="navbar navbar-expand-lg navbar-light" data-navbar-on-scroll="data-navbar-on-scroll">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="files/public/assets/img/gallery/jayhaw.png" width="118" alt="logo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                    </ul>
-                    <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="index.html">Back</a>
+            <nav class="navbar navbar-expand-lg navbar-light" data-navbar-on-scroll="data-navbar-on-scroll">
+              <div class="container"><a class="navbar-brand" href="index.php"><img src="live-doc-v1.0.0/public/assets/img/gallery/jayhaw.png" width="118" alt="logo" /></a>
+              </div>
+              <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                </ul><a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="index.html">Back</a>
+              </div>
+            </nav>
+
+
+            <div class="testbox">
+              <form id="ft-form" method="POST" accept-charset="UTF-8">
+                <div class="banner">
+                  <h1>Book Appointment</h1>
                 </div>
-            </div>
-        </nav>
-        <form id="ft-form" method="POST" accept-charset="UTF-8">
-            <fieldset>
-                <legend>Patient Information</legend>
-                <div class="item">
+                <br/>
+                <fieldset>
+                  <legend>Patient Information</legend>
+                  <div class="item">
                     <label for="email">Email<span>*</span></label>
                     <input id="email" type="email" name="email" required/>
-                </div>
-                <div class="item">
-                    <label for="phone">Phone number<span>*</span></label>
-                    <input id="phone" type="number" name="phone" required/>
-                </div>
-                <div class="item">
-                    <label for="bdate">Birth Date <span>*</span></label>
+                  </div>
+                  <div class="item">
+                    <label for="phone">Daytime Phone<span>*</span></label>
+                    <input id="phone" type="number"   name="phone" required/>
+                  </div>
+                  
+                  <div class="item">
+                    <label for="bdate">Date of Birth<span>*</span></label>
                     <input id="bdate" type="date" name="bdate" required/>
                     <i class="fas fa-calendar-alt"></i>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Appointment request</legend>
-                <div class="item">
+                  </div>
+                </fieldset>
+                <br/> <br>
+                <fieldset>
+                  <legend>Appointment Information</legend>
+                  <div class="item">
                     <label for="date">Date<span>*</span></label>
                     <input id="date" type="date" name="date" required/>
                     <i class="fas fa-calendar-alt"></i>
-                </div>
-                <div class="item">
-                    <p>Time</p>
-                    <select>
-                        <option selected value="" id="time" disabled selected></option>
-                        <option value="m">Morning</option>
-                        <option value="a">Afternoon</option>
-                        <option value="e">Evening</option>
-                    </select>
-                </div>
-                <div class="question">
+                  </div>
+                  <div class="item">
+                    <label for="time">Time</label>
+                    <input type="time" id="time" name="time">
+                  </div>
+                  <div class="question">
                     <label>Preferred Physician</label>
                     <div class="question-answer">
-                        <div>
-                            <input type="radio" id="radio_1" name="physician"/>
-                            <label for="radio_1" class="radio"><span>Dr. Anderson</span></label>
-                        </div>
-                        <div>
-                            <input  type="radio"  id="radio_3" name="physician"/>
-                            <label for="radio_3" class="radio"><span>Dr. Patel</span></label>
-                        </div>
-                        <div>
-                            <input  type="radio" value="none" id="radio_5" name="physician"/>
-                            <label for="radio_5" class="radio"><span>Dr. Jones</span></label>
-                        </div>
-                        <div>
-                            <input  type="radio" value="none" id="radio_6" name="physician"/>
-                            <label for="radio_6" class="radio"><span>Dr. Smith</span></label>
-                        </div>
-                        <div>
-                            <input  type="radio" value="none" id="radio_4" name="physician"/>
-                            <label for="radio_4" class="radio"><span>No preference</span></label>
-                        </div>
+                      <div>
+                        <input type="radio" value="none" id="radio_1" name="physician"/>
+                        <label for="radio_1" class="radio"><span>Dr. Watkins</span></label>
+                      </div>
+                      <div>
+                        <input  type="radio" value="none" id="radio_3" name="physician"/>
+                        <label for="radio_3" class="radio"><span>Dr. Jay</span></label>
+                      </div>
+                      <div>
+                        <input  type="radio" value="none" id="radio_4" name="physician"/>
+                        <label for="radio_4" class="radio"><span>Dr. Hawk</span></label>
+                      </div>
+                      <div>
+                        <input  type="radio" value="none" id="radio_5" name="physician"/>
+                        <label for="radio_5" class="radio"><span>Dr. No</span></label>
+                      </div>
+                      <div>
+                        <input  type="radio" value="none" id="radio_6" name="physician"/>
+                        <label for="radio_6" class="radio"><span>No Preference</span></label>
+                      </div>
                     </div>
-                </div>
-                <div class="item">
+                  </div>
+                  <div class="item">
                     <p>Speciality</p>
                     <select>
                         <option selected value="" id="special"disabled selected></option>
@@ -90,74 +91,79 @@
                         <option value = "Opthamology">Opthamology</option>
                     </select>
                 </div>
-                <div class="item">
+                  <div class="item">
                     <label for="instructions">Please describe the reason for this visit </label>
                     <textarea id="instructions" rows="3"></textarea>
+                  </div>
+                </fieldset>
+                <div class="btn-block">
+                  <button id="button" type="submit" onclick="onSubmit()">Submit</button>
                 </div>
-            </fieldset>
-            <div class="btns">
-                <input id="button" type="button" onclick="onSubmit()" value="Submit"><br><br>
+              </form>
             </div>
-        </form>
+                  </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+  </body>
 
-        <script>
-            function onSubmit() {
-                var username = document.getElementById('email').value;
-                var dob = document.getElementById('bdate').value;
-                var date = document.getElementById('date').value;
-                var time  = document.getElementById('time').value;
-                var doc_name= document.getElementById('radio_1').value;
-                var speciality = document.getElementById('special').value;
-                console.log();
-                console.log(typeof(dob));
-                if(username == "" || date == "" || time == "" ){
-                        alert("FIELDS ARE INCOMPLETE");
-                }
-                else if(doc_name == "" && specilaity == "")
-                {
-                        alert("FIELDS ARE INCOMPLETE");    
-                }
-                else
-                {
-                    const Appointment = {
-                    
-                        username: username,
-                        date: date,
-                        time: time,
-                        doc_name: doc_name,
-                        speciality: speciality
+  <script>
+     function onSubmit() {
+              var username = document.getElementById('email').value;
+              var dob = document.getElementById('bdate').value;
+              var date = document.getElementById('date').value;
+              var time  = document.getElementById('time').value;
+              var doc_name= document.getElementById('radio_1').value;
+              var speciality = document.getElementById('special').value;
+              console.log();
+              if(username == "" || date == "" || time == "" ){
+                      alert("Please fill out the whole form!");
+              }
+              else if(doc_name == "" && specilaity == "")
+              {
+                      alert("Please fill out the whole form!");    
+              }
+              else
+              {
+                  const Appointment = {
+                  
+                      username: username,
+                      date: date,
+                      time: time,
+                      doc_name: doc_name,
+                      speciality: speciality
 
-                    };
-                    
-                    const otherParam = {
-                        headers:
-                        {
-                            "content-type":"application/json; charset=UTF-8"
-                        },
+                  };
+                  
+                  const otherParam = {
+                      headers:
+                      {
+                          "content-type":"application/json; charset=UTF-8"
+                      },
 
-                        body: JSON.stringify(Appointment),
-                        method:"POST"
-                        }
-                    console.log(document.getElementById('date'));
-                    console.log(document.getElementById('time'));
+                      body: JSON.stringify(Appointment),
+                      method:"POST"
+                      }
+                  console.log(document.getElementById('date'));
+                  console.log(document.getElementById('time'));
 
-                    var valid = false;
-                    fetch("https://localhost:44354/Create", otherParam)
-                    .then(data =>{return data.json()})
-                    .then(res=>{if(res == true)
-                    {
-                        alert("APPOINTMENT ADDED")
-                        window.location.assign("confirmation.html"); 
-                    }
-                    else
-                    {
-                        alert("ERROR!");
-                    }})
-                    .catch(error=>console.log(error))
-                };
+                  var valid = false;
+                  fetch("https://localhost:44354/Create", otherParam)
+                  .then(data =>{return data.json()})
+                  .then(res=>{if(res == true)
+                  {
+                      alert("APPOINTMENT ADDED")
+                      window.location.assign("confirmation.html"); 
+                  }
+                  else
+                  {
+                      alert("ERROR!");
+                  }})
+                  .catch(error=>console.log(error))
+              };
 
-            }
-         </script>
-    </body>
+          }
+  </script>
 </html>
-
