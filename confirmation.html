@@ -1,5 +1,5 @@
 <html> 
-    <body>
+    <body onload="fetchData()">
         <link rel="apple-touch-icon" sizes="180x180" href="live-doc-v1.0.0/public/assets/img/favicons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="live-doc-v1.0.0/public/assets/img/favicons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="live-doc-v1.0.0/public/assets/img/favicons/favicon-16x16.png">
@@ -22,10 +22,25 @@
             <div>
             
                 <p>Your appointment is confirmed.</p>
-                <p>Time: []</p>
-                <p>Date: []</p>
-                <p>Doctor: []</p>
+                <p>Time: <span id="time">?</span></p>
+                <p>Date: <span id="date">?</span></p>
+                <p>Doctor: <span id="Doctor">?</span></p>
             </div>
         </fieldset>
     </body>
 </html>
+<script>
+    function fetchData()
+    {
+        const urlParams = new URLSearchParams(window.location.search);
+        const confirmation = urlParams.get('confirmation');	
+        var temp = confirmation.split("/");
+        output1 = document.querySelector("#time");
+        output1.textContent = temp[0];
+        output2 = document.querySelector("#date");
+        output2.textContent = temp[1];
+        output3 = document.querySelector("#Doctor");
+        output3.textContent = temp[2];
+
+    }
+</script>

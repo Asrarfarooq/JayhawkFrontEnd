@@ -115,8 +115,6 @@
                  var doc_name= document.getElementById('radio_1').value;
                  var speciality = document.getElementById('special').value;
                  var instructions = document.getElementById('instructions').value;
-                 console.log();
-                 console.log(typeof(time));
                  if(username == "" || date == "" || time == "" ){
                          alert("Please fill out the whole form!");
                  }
@@ -146,9 +144,6 @@
                          body: JSON.stringify(Appointment),
                          method:"POST"
                          }
-                     console.log(document.getElementById('date'));
-                     console.log(document.getElementById('time'));
-                     console.log(document.getElementById('instructions'));
         
                      var valid = false;
                      fetch("https://localhost:44354/Book", otherParam)
@@ -156,11 +151,11 @@
                      .then(res=>{if(res == true)
                      {
                          alert("APPOINTMENT ADDED")
-                         window.location.assign("confirmation.html"); 
+                         window.location.assign("confirmation.html?confirmation" + "=" + time + "/" + date + "/" + doc_name);
                      }
                      else
                      {
-                         alert("ERROR! BOOKING NOT SUCESSFUL");
+                         alert("ERROR! BOOKING NOT SUCCESSFUL");
                      }})
                      .catch(error=>console.log(error))
                  };
