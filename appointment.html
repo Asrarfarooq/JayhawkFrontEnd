@@ -22,7 +22,7 @@
             </div>
         </nav>
         <div class="testbox">
-            <form id="ft-form" method="POST" accept-charset="UTF-8">
+            <form id="ft-form" method="post" accept-charset="UTF-8">
                 <div class="banner">
                     <h1>Book Appointment</h1>
                 </div>
@@ -95,7 +95,7 @@
                     </div>
                 </fieldset>
                 <div class="btn-block">
-                    <button id="button" type="submit" onclick="onSubmit()">Submit</button>
+                    <input id="button" type="button" value="Submit" onclick="onSubmit()"></input>
                 </div>
             </form>
         </div>
@@ -114,7 +114,7 @@
                  var time  = document.getElementById('time').value;
                  var doc_name= document.getElementById('radio_1').value;
                  var speciality = document.getElementById('special').value;
-                 var instructions = documment.getElementById('instructions').value;
+                 var instructions = document.getElementById('instructions').value;
                  console.log();
                  console.log(typeof(time));
                  if(username == "" || date == "" || time == "" ){
@@ -148,10 +148,10 @@
                          }
                      console.log(document.getElementById('date'));
                      console.log(document.getElementById('time'));
-                     console.log(documment.getElementById('instructions'));
+                     console.log(document.getElementById('instructions'));
         
                      var valid = false;
-                     fetch("https://localhost:44354/Create", otherParam)
+                     fetch("https://localhost:44354/Book", otherParam)
                      .then(data =>{return data.json()})
                      .then(res=>{if(res == true)
                      {
