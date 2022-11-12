@@ -1,11 +1,11 @@
 <html>
     <body>
-        <link rel="apple-touch-icon" sizes="180x180" href="live-doc-v1.0.0/public/assets/img/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="live-doc-v1.0.0/public/assets/img/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="live-doc-v1.0.0/public/assets/img/favicons/favicon-16x16.png">
-        <link rel="shortcut icon" type="image/x-icon" href="live-doc-v1.0.0/public/assets/img/favicons/favicon.ico">
-        <link rel="manifest" href="live-doc-v1.0.0/public/assets/img/favicons/manifest.json">
-        <meta name="msapplication-TileImage" content="live-doc-v1.0.0/public/assets/img/favicons/mstile-150x150.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="files/public/assets/img/gallery/jayhaw.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="files/public/assets/img/gallery/jayhaw.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="files/public/assets/img/gallery/jayhaw.png">
+        <link rel="shortcut icon" type="image/x-icon" href="files/public/assets/img/gallery/jayhaw.png">
+        <link rel="manifest" href="files/public/assets/img/favicons/manifest.json">
+        <meta name="msapplication-TileImage" content="files/public/assets/img/gallery/jayhaw.png">
         <meta name="theme-color" content="#ffffff">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -13,123 +13,158 @@
         <link href="files/public/assets/css/appointment.css" rel="stylesheet" />
         <main class="main" id="top">
         <nav class="navbar navbar-expand-lg navbar-light" data-navbar-on-scroll="data-navbar-on-scroll">
-            <div class="container">
-                <a class="navbar-brand" href="index.html"><img src="files/public/assets/img/gallery/jayhaw.png" width="118" alt="logo" /></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                    </ul>
-                    <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="index.html">Back</a>
-                </div>
+            <div class="container"><a class="navbar-brand" href="index.html"><img src="files/public/assets/img/gallery/jayhaw.png" width="118" alt="logo" /></a>
+            </div>
+            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                </ul>
+                <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="index.html">Back</a>
             </div>
         </nav>
-        <h2>Book Appointment</h2>
-        <section class="py-8">
-            <div class="container">
-                <div class="row">
-                    <div class="bg-holder bg-size" style="background-image:url(files/public/assets/img/gallery/dot-bg.png);background-position:bottom right;background-size:auto;">
-                    </div>
-                    
-                    <div class="testbox">
-                        <form action="/">
-                            <div class="banner">
-                            </div>
-                            <br/>
-                            <fieldset>
-                                <legend>Patient Information</legend>
-                                <div class="item">
-                                    <label for="email">Email<span>*</span></label>
-                                    <input id="email" type="email" name="email" required/>
-                                </div>
-                                <div class="item">
-                                    <label for="fname"> First Name<span>*</span></label>
-                                    <input id="fname" type="text" name="fname" required/>
-                                </div>
-                                <div class="item">
-                                    <label for="initial">Middle Initial<span></span></label>
-                                    <input id="initial" type="text" name="initial"/>
-                                </div>
-                                <div class="item">
-                                    <label for="lname"> Last Name<span>*</span></label>
-                                    <input id="lname" type="text" name="lname" required/>
-                                </div>
-                                <div class="item">
-                                    <label for="phone">Phone number<span>*</span></label>
-                                    <input id="phone" type="number"   name="phone" required/>
-                                </div>
-                                <div class="item">
-                                    <label for="bdate">Birth Date <span>*</span></label>
-                                    <input id="bdate" type="date" name="bdate" required/>
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                              </fieldset>
-                              <br>
-                              <fieldset>
-                                <legend>Appointment Information</legend>
-                                <div class="item">
-                                    <label for="date">Date<span>*</span></label>
-                                    <input id="date" type="date" name="date" required/>
-                                    <i class="fas fa-calendar-alt"></i>
-                                </div>
-                                <div class="item">
-                                    <p>Time</p>
-                                    <select>
-                                        <option selected value="" disabled selected></option>
-                                        <option value="m" >Morning</option>
-                                        <option value="a">Afternoon</option>
-                                        <option value="e">Evening</option>
-                                    </select>
-                                </div>
-                                <div class="question">
-                                    <label>Preferred Physician</label>
-                                    <div class="question-answer">
-                                        <div>
-                                            <input type="radio" value="none" id="radio_1" name="physician"/>
-                                            <label for="radio_1" class="radio"><span>Dr. Anderson</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_3" name="physician"/>
-                                            <label for="radio_3" class="radio"><span>Dr. Patel</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_5" name="physician"/>
-                                            <label for="radio_5" class="radio"><span>Dr. Jones</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_6" name="physician"/>
-                                            <label for="radio_6" class="radio"><span>Dr. Smith</span></label>
-                                        </div>
-                                        <div>
-                                            <input  type="radio" value="none" id="radio_4" name="physician"/>
-                                            <label for="radio_4" class="radio"><span>No preference</span></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>Speciality</p>
-                                    <select>
-                                        <option selected value="" disabled selected></option>
-                                        <option value = "General physician">General Physician</option>
-                                        <option value = "Orthopedics">Orthopedics</option>
-                                        <option value = "Opthamology">Opthamology</option>
-                                    </select>
-                                </div>
-            
-                                <div class="item">
-                                    <label for="instructions">Please describe the reason for this visit </label>
-                                    <textarea id="instructions" rows="3"></textarea>
-                                </div>
-                            </fieldset>
-                            <div class="btn-block">
-                                <button type="submit" href="confirmation.html">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+        <div class="testbox">
+            <form id="ft-form" method="post" accept-charset="UTF-8">
+                <div class="banner">
+                    <h1>Book Appointment</h1>
                 </div>
-                </form>
-            </div>
-            </div>
-            </div>
+                <br/>
+                <fieldset>
+                    <legend>Patient Information</legend>
+                    <div class="item">
+                        <label for="email">Email<span>*</span></label>
+                        <input id="email" type="email" name="email" required/>
+                    </div>
+                    <div class="item">
+                        <label for="phone">Daytime Phone<span>*</span></label>
+                        <input id="phone" type="number"   name="phone" required/>
+                    </div>
+                    <div class="item">
+                        <label for="bdate">Date of Birth<span>*</span></label>
+                        <input id="bdate" type="date" name="bdate" required/>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                </fieldset>
+                <br/> <br>
+                <fieldset>
+                    <legend>Appointment Information</legend>
+                    <div class="item">
+                        <label for="date">Date<span>*</span></label>
+                        <input id="date" type="date" name="date" required/>
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="item">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" min="9:00" max="17:00">
+                    </div>
+                    <div class="question">
+                        <label>Preferred Physician</label>
+                        <div class="question-answer">
+                            <div>
+                                <input type="radio" value="Dr. Watkins" id="radio_1" name="physician"/>
+                                <label for="radio_1" class="radio"><span>Dr. Watkins</span></label>
+                            </div>
+                            <div>
+                                <input  type="radio" value="Dr. Jay" id="radio_3" name="physician"/>
+                                <label for="radio_3" class="radio"><span></span>Dr.Jay</label>
+                            </div>
+                            <div>
+                                <input  type="radio" value="Dr. Hawk" id="radio_4" name="physician"/>
+                                <label for="radio_4" class="radio"><span>Dr. Hawk</span></label>
+                            </div>
+                            <div>
+                                <input  type="radio" value="Dr. No" id="radio_5" name="physician"/>
+                                <label for="radio_5" class="radio"><span>Dr. No</span></label>
+                            </div>
+                            <div>
+                                <input  type="radio" value="No Preference" id="radio_6" name="physician"/>
+                                <label for="radio_6" class="radio"><span>No Preference</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>Speciality</p>
+                        <select>
+                            <option selected value="" disabled selected></option>
+                            <option id="special" value = "General physician">General Physician</option>
+                            <option value = "Orthopedics">Orthopedics</option>
+                            <option value = "Opthamology">Opthamology</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="instructions">Please describe the reason for this visit </label>
+                        <textarea id="instructions" maxlength="180" rows="3"></textarea>
+                    </div>
+                </fieldset>
+                <div class="btn-block">
+                    <input id="button" type="button" value="Submit" onclick="onSubmit()"></input>
+                </div>
+            </form>
+        </div>
+        </div>
+        </form>
+        </div>
+        </div>
+        </div>
         </section>
     </body>
+    <script>
+        function onSubmit() {
+                 var username = document.getElementById('email').value;
+                 var dob = document.getElementById('bdate').value;
+                 var date = document.getElementById('date').value;
+                 var time  = document.getElementById('time').value;
+                 var doc_name= document.getElementById('radio_1').value;
+                 var speciality = document.getElementById('special').value;
+                 var instructions = document.getElementById('instructions').value;
+                 console.log();
+                 console.log(typeof(time));
+                 if(username == "" || date == "" || time == "" ){
+                         alert("Please fill out the whole form!");
+                 }
+                 else if(doc_name == "" && specilaity == "")
+                 {
+                         alert("Please fill out the whole form!");    
+                 }
+                 else
+                 {
+                     const Appointment = {
+                     
+                         username: username,
+                         date: date,
+                         time: time,
+                         doc_name: doc_name,
+                         speciality: speciality,
+                         instructions: instructions
+        
+                     };
+                     
+                     const otherParam = {
+                         headers:
+                         {
+                             "content-type":"application/json; charset=UTF-8"
+                         },
+        
+                         body: JSON.stringify(Appointment),
+                         method:"POST"
+                         }
+                     console.log(document.getElementById('date'));
+                     console.log(document.getElementById('time'));
+                     console.log(document.getElementById('instructions'));
+        
+                     var valid = false;
+                     fetch("https://localhost:44354/Book", otherParam)
+                     .then(data =>{return data.json()})
+                     .then(res=>{if(res == true)
+                     {
+                         alert("APPOINTMENT ADDED")
+                         window.location.assign("confirmation.html"); 
+                     }
+                     else
+                     {
+                         alert("ERROR! BOOKING NOT SUCESSFUL");
+                     }})
+                     .catch(error=>console.log(error))
+                 };
+        
+             }
+    </script>
 </html>
