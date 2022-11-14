@@ -1,5 +1,5 @@
 <html>
-    <body>
+    <body onload="getUsername()">
         <link rel="apple-touch-icon" sizes="180x180" href="files/public/assets/img/gallery/jayhaw.png">
         <link rel="icon" type="image/png" sizes="32x32" href="files/public/assets/img/gallery/jayhaw.png">
         <link rel="icon" type="image/png" sizes="16x16" href="files/public/assets/img/gallery/jayhaw.png">
@@ -31,7 +31,7 @@
                     <legend>Patient Information</legend>
                     <div class="item">
                         <label for="email">Email<span>*</span></label>
-                        <input id="email" type="email" name="email" required/>
+                        <input id="email" type="email" name="email" required disabled/>
                     </div>
                     <div class="item">
                         <label for="phone">Daytime Phone<span>*</span></label>
@@ -107,12 +107,25 @@
         </section>
     </body>
     <script>
+        function getUsername()
+        {
+            var username = document.getElementById('email');
+            username.value = sessionStorage.getItem('username');
+        }
+        
         function onSubmit() {
                  var username = document.getElementById('email').value;
                  var dob = document.getElementById('bdate').value;
                  var date = document.getElementById('date').value;
                  var time  = document.getElementById('time').value;
-                 var doc_name= document.getElementById('radio_1').value;
+                 var doc_name;
+                 const radioButtons = document.querySelectorAll('input[name="physician"]');
+                    for (const radioButton of radioButtons) {
+                        if (radioButton.checked) {
+                            doc_name = radioButton.value;
+                            break;
+                        }
+                    }
                  var speciality = document.getElementById('special').value;
                  var instructions = document.getElementById('instructions').value;
                  if(username == "" || date == "" || time == "" ){
