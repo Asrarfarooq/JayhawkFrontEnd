@@ -37,7 +37,7 @@
                   <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
                      <li class="nav-item px-2"><a class="nav-link" href="#">Help</a></li>
                   </ul>
-                  <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" href="login.html">Logout</a>
+                  <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" onclick="logout()">Logout</a>
                </div>
             </div>
          </nav>
@@ -125,7 +125,11 @@
              nav.init();
                const dp = new DayPilot.Month("dp");
                dp.init();
-           
+               
+               function logout(){
+                  sessionStorage.clear();
+                  window.location.assign("login.html");
+               }
                async function loadEvents() {
                const start = dp.visibleStart();
                const end = dp.visibleEnd();
