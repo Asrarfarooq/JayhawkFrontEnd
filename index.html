@@ -112,6 +112,7 @@
             <div id="dp"></div>
             <script type="text/javascript">
     
+               var username= sessionStorage.getItem("username");           
                const nav = new DayPilot.Navigator("nav", {
                showMonths: 1,
                skipMonths: 1,
@@ -128,7 +129,7 @@
                async function loadEvents() {
                const start = dp.visibleStart();
                const end = dp.visibleEnd();
-               const {data} = await DayPilot.Http.get("https://localhost:44354/getAppointments?username=srikar.turaga@ku.edu");
+               const {data} = await DayPilot.Http.get("https://localhost:44354/getAppointments?username=" + username);
                console.log(data);
                dp.update({
                    events: data
