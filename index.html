@@ -109,13 +109,13 @@
          <h3 style="text-align: center;">My Bookings</h3>
           <section>
             <script src="daypilot-javascript.min.js" type="text/javascript"></script>
-            <div id="nav"></div>
-            <div id="dp"></div>
+            <!--<div id="nav"></div>-->
+            <div id="dp"style="user-select: none;position: relative;width: 80%;height: 530px;visibility: visible;margin: auto;"></div>
             <script type="text/javascript">
     
                var username= sessionStorage.getItem("username");           
-               const nav = new DayPilot.Navigator("nav", {
-               showMonths: 1,
+               /*const nav = new DayPilot.Navigator("nav", {
+               showMonths: 0,
                skipMonths: 1,
                selectMode: "Week",
                onTimeRangeSelected: args => {
@@ -123,7 +123,7 @@
                  app.loadEvents();
                }
                });
-             nav.init();
+             nav.init();*/
                const dp = new DayPilot.Month("dp");
                dp.init();
                
