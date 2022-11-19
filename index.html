@@ -125,6 +125,46 @@
                });
              nav.init();*/
                const dp = new DayPilot.Month("dp");
+               dp.eventDeleteHandling = "Update";
+
+               dp.onEventDelete = function(args) {
+               if (!confirm("Do you really want to cancel this booking?")) {
+                   args.preventDefault();
+               }
+               };
+
+                dp.onEventDeleted = function(args) {
+
+                var username = sessionStorage.getItem("username");
+                var appt_id = args.e.id();
+
+                const Patient = {
+                username: username,
+                appt_id: appt_id
+            	};
+
+            	const otherParam = {
+                headers:{
+                    "content-type":"application/json; charset=UTF-8"
+                },
+                 body: JSON.stringify(Patient),
+                 method:"POST"
+                }
+                console.log()
+                var valid = false;
+                fetch("https://localhost:44354/Remove", otherParam)
+                .then(data =>{return data.json()})
+                .then(res=>{if(res == true)
+                {
+                    alert("Appointment Deleted");
+                }
+                else
+                {
+                    alert("Error");
+                }})
+                .catch(error=>console.log(error))
+                };
+
                dp.init();
                
                function logout(){
