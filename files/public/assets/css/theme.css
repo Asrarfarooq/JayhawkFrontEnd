@@ -115,6 +115,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: calc(1.2978rem + 0.5736vw);
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
