@@ -41,72 +41,13 @@
                </div>
             </div>
          </nav>
-         <!-- ============================================-->
-         <!-- <section> begin ============================-->
-         <section class="py-5" id="departments">
-            <div class="container">
-               <div class="row">
-                  <div class="col-12 py-3">
-                     <div class="bg-holder bg-size" style="background-image:url(files/public/assets/img/gallery/bg-departments.png);background-position:top center;background-size:contain;">
-                     </div>
-                     <!--/.bg-holder-->
-                     <h2 class="text-center">JayHawk+</h2>
-                     <h3>Welcome Back Doctor</h3>
-                  </div>
-               </div>
-            </div>
-            <!-- end of .container-->
+         <h1>Help</h1>
+         <section>
+            This section aims at helping user with navigating the JayHawk+
          </section>
-         <!-- <section> close ============================-->
-         <!-- ============================================-->
 
          
-         <h3 style="text-align: center;">My Appointments</h3>
-          <section class="cal">
-            <script src="daypilot-javascript.min.js" type="text/javascript"></script>
-            <!--<div id="nav"></div>-->
-            <div id="dp"></div>
-            <script type="text/javascript">
-    
-               var username= sessionStorage.getItem("username");           
-               /*const nav = new DayPilot.Navigator("nav", {
-               showMonths: 0,
-               skipMonths: 1,
-               selectMode: "Week",
-               onTimeRangeSelected: args => {
-                 dp.update({startDate: args.day});
-                 app.loadEvents();
-               }
-               });
-             nav.init();*/
-               const dp = new DayPilot.Month("dp");
-               dp.init();
-               
-               function logout(){
-                  sessionStorage.clear();
-                  window.location.assign("doctor.html");
-               }
-               async function loadEvents() {
-               const start = dp.visibleStart();
-               const end = dp.visibleEnd();
-               const {data} = await DayPilot.Http.get("https://localhost:44354/getAppointmentsDoctor?username=" + username);
-               console.log(data);
-               dp.update({
-                   events: data
-               });
-           }
-           </script>
-          </section>
-          <section class="py-0 bg-primary">
-            <div class="container">
-               <div class="row justify-content-evenly py-4">
-                  <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
-                     <p class="fs--1 my-2 fw-bold text-200" style="text-align: center;">All rights Reserved &copy; Team HawkPlus</p>
-                  </div>
-               </div>
-            </div>
-            <!-- end of .container-->
-          </section>
+       
       </main>
       <!-- ===============================================-->
       <!--    End of Main Content-->
