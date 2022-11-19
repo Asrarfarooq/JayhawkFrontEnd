@@ -78,6 +78,8 @@ hr {
   background-color: currentColor;
   border: 0;
   opacity: 1;
+  width: 70%;
+  margin-left: 15%;
 }
 
 hr:not([size]) {
