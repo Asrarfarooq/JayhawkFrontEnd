@@ -28,17 +28,17 @@
         <!--    Main Content-->
         <!-- ===============================================-->
         <main class="main" id="top">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-                    <a class="navbar-brand" href="index.html"><img src="files/public/assets/img/gallery/jayhaw.png" width="118" alt="logo" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-                    <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                            <li class="nav-item px-2"><a class="nav-link" href="#">Help</a></li>
-                        </ul>
-                        <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" onclick="logout()">Logout</a>
-                    </div>
-                </div>
+            <nav class="navbar navbar-expand-lg navbar-light" data-navbar-on-scroll="data-navbar-on-scroll">
+               <div class="container">
+                  <a class="navbar-brand" href="index.html"><img src="files/public/assets/img/gallery/jayhaw.png" width="118" alt="logo" /></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
+                  <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                     <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                        <li class="nav-item px-2"><a class="nav-link" href="#">Help</a></li>
+                     </ul>
+                     <a class="btn btn-sm btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" onclick="logout()">Logout</a>
+                  </div>
+               </div>
             </nav>
             <section>
                 <div class="container">
@@ -87,13 +87,51 @@
                 </style>
                 <button class="accordion">My Visits</button>
                 <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><table class="table">
+                        <tbody>
+                        <tr>
+                        <td>&nbsp;<strong>Date</strong>&nbsp;</td>
+                        <td><strong>Doctor</strong></td>
+                        <td><strong>Department</strong></td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;10/05/2022</td>
+                        <td>Dr. Jay</td>
+                        <td>Primary Care</td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;09/01/2022</td>
+                        <td>Dr. Hawk</td>
+                        <td>Health Center</td>
+                        </tr>
+                        </tbody>
+                        </table></p>
                 </div>
                 <br>
                 <hr>
                 <button class="accordion">Medications</button>
                 <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><table class="table">
+                        <tbody>
+                        <tr>
+                        <td><strong>Medications&nbsp;</strong></td>
+                        <td><strong>Directions</strong></td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;Amoxil 200 MG TABS</td>
+                        <td>&nbsp;2 TABLETS DAILY</td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;Calciferol 5 MG TABS</td>
+                        <td>&nbsp;1 TABLET WEEK</td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;Montelukast Sodium 10 MG TABS</td>
+                        <td>&nbsp;1 TABLET DAILY</td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <!-- DivTable.com --></p>
                 </div>
                 <br>
                 <hr>
@@ -105,7 +143,8 @@
                 <hr>
                 <button class="accordion">Radiology</button>
                 <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p><a href="https://raw.githubusercontent.com/Asrarfarooq/JayhawkFrontEnd/main/files/public/assets/img/gallery/CXR-Frontal%20Lateral.png">CXR-Frontal & Lateral</a></p>
+                    <p><a href="files/public/assets/img/gallery/CXR-Frontal%20Lateral.png"></a></p>
                 </div>
                 <hr>
                 <button class="accordion">Allergies</button>
