@@ -61,32 +61,30 @@
          <!-- ============================================-->
 
          
-         <h3 style="text-align: center;">My Appointments</h3>
-          <section class="cal">
-            <script src="daypilot-javascript.min.js" type="text/javascript"></script>
-            <!--<div id="nav"></div>-->
-            <div id="dp"></div>
+         <h3 style="text-align: center;">Patient Database</h3>
+          
             <script type="text/javascript">
     
-               var username= sessionStorage.getItem("username");           
-               const dp = new DayPilot.Month("dp");
-               dp.init();
-               
+               var username= sessionStorage.getItem("username");            
                function logout(){
                   sessionStorage.clear();
                   window.location.assign("admin.html");
                }
-               async function loadEvents() {
-               const start = dp.visibleStart();
-               const end = dp.visibleEnd();
-               const {data} = await DayPilot.Http.get("https://localhost:44354/getAppointmentsDoctor?username=" + username);
-               console.log(data);
-               dp.update({
-                   events: data
-               });
-           }
+
+               function loadEvents()
+               {
+                  fetch("https://localhost:44354/getPatients")
+                  .then(data =>{return data.json()})
+                  .then(res=>{
+                     console.log(res);
+                  })
+                  .catch(error=>console.log(error));
+                 
+               }
+               
+          
            </script>
-          </section>
+
           <section class="py-0 bg-primary">
             <div class="container">
                <div class="row justify-content-evenly py-4">
