@@ -69,16 +69,6 @@
             <script type="text/javascript">
     
                var username= sessionStorage.getItem("username");           
-               /*const nav = new DayPilot.Navigator("nav", {
-               showMonths: 0,
-               skipMonths: 1,
-               selectMode: "Week",
-               onTimeRangeSelected: args => {
-                 dp.update({startDate: args.day});
-                 app.loadEvents();
-               }
-               });
-             nav.init();*/
                const dp = new DayPilot.Month("dp");
                dp.init();
                
