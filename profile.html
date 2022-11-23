@@ -1,11 +1,70 @@
-<html>
-    <body>
-        Profile Page 
-        <section>
-            Welcome Back 
-            Username: 
-            Password:
-            Prefrences 
-        </section>
+<html> 
+    <body onload="fetchData()">
+        <link rel="apple-touch-icon" sizes="180x180" href="files/public/assets/img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="files/public/assets/img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="files/public/assets/img/favicons/favicon-16x16.png">
+        <link rel="shortcut icon" type="image/x-icon" href="files/public/assets/img/favicons/favicon.ico">
+        <link rel="manifest" href="files/public/assets/img/favicons/manifest.json">
+        <meta name="msapplication-TileImage" content="files/public/assets/img/favicons/mstile-150x150.png">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link href="files/public/assets/css/confirmation.css" rel="stylesheet" />
+        <link href="files/public/assets/css/theme.css" rel="stylesheet" />
+        <link href="files/public/assets/css/confirmation.css" rel="stylesheet" />
+        <br>
+        <br>
+        <h2>My Profile</h2>
+        <div>
+        </div>
+        <div id="box">
+        <fieldset>
+            <div>
+                <p>First Name: <span id="firstname">?</span></p>
+                <p>Last Name: <span id="lastname">?</span></p>
+                <p>Email: <span id="email">?</span></p>
+                <p>Password: <span id="password">?</span></p>
+            </div><br>
+        </fieldset>
+            <a class="btn btn-lg btn-primary rounded-pill" href="index.html" role="button">Dashboard</a>
+        
     </body>
 </html>
+<script>
+    function fetchData()
+    {
+        
+                var username = sessionStorage.getItem("username");
+                const Patient = {
+                username: username,
+            	};
+
+            	const otherParam = {
+                headers:{
+                    "content-type":"application/json; charset=UTF-8"
+                },
+                 body: JSON.stringify(Patient),
+                 method:"POST"
+                }
+                console.log()
+                var valid = false;
+                fetch("https://localhost:44354/getProfile", otherParam)
+                .then(data =>{return data.json()})
+                .then(res=>{
+                {
+                    console.log(res)
+                    output1 = document.querySelector("#firstname");
+                    output1.textContent = res[0]["firstname"];
+                    output2 = document.querySelector("#lastname");
+                    output2.textContent = res[0]["lastname"];
+                    output3 = document.querySelector("#email");
+                    output3.textContent = res[0]["username"];
+                    output4 = document.querySelector("#password");
+                    output4.textContent = res[0]["password"];
+                }
+                })
+                .catch(error=>console.log(error));
+            }
+
+       
+</script>
