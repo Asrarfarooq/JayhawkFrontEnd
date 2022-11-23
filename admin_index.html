@@ -51,21 +51,31 @@
                      </div>
                      <!--/.bg-holder-->
                      <h2 class="text-center">JayHawk+</h2>
-                     <h3>Admin Database</h3>
                   </div>
                </div>
             </div>
             <!-- end of .container-->
-         </section>
          <!-- <section> close ============================-->
          <!-- ============================================-->
 
          
-         <h3 style="text-align: center;">Patient Database</h3>
-         <section>
-            <p id="showData"></p>
-         </section>
          
+         <div>
+            <h3 style="text-align: center;">Patient Database</h3>
+            <p id="showData1" class="table"></p>
+         </div>
+         <br>
+         <div>
+            <h3 style="text-align: center;">Doctor Database</h3>
+            <p id="showData2" class="table"></p>
+         </div>
+         <br>
+         <div>
+            <h3 style="text-align: center;">Appointment Database</h3>
+            <p id="showData3" class="table"></p>
+         </div>
+         </section>
+         <br>
             <script type="text/javascript">
     
                var username= sessionStorage.getItem("username");            
@@ -104,13 +114,12 @@
                            tabCell.innerHTML = res[i][col[j]];
                         }
                      }
-                     const divShowData = document.getElementById('showData');
+                     const divShowData = document.getElementById('showData1');
                      divShowData.innerHTML = "";
                      divShowData.appendChild(table);
 
                   })
                   .catch(error=>console.log(error));
-
                   fetch("https://localhost:44354/getDoctors")
                   .then(data =>{return data.json()})
                   .then(res=>{
@@ -139,12 +148,47 @@
                            tabCell.innerHTML = res[i][col[j]];
                         }
                      }
-                     const divShowData = document.getElementById('showData');
+                     const divShowData = document.getElementById('showData2');
                      divShowData.innerHTML = "";
                      divShowData.appendChild(table);
 
                   })
                   .catch(error=>console.log(error));
+                  fetch("https://localhost:44354/getAllAppointments")
+                  .then(data =>{return data.json()})
+                  .then(res=>{
+                     let col = [];
+                     for (let i = 0; i < res.length; i++) {
+                        for (let key in res[i]) {
+                           if (col.indexOf(key) === -1) {
+                              col.push(key);
+                           }
+                        }
+                     }
+                     const table = document.createElement("table");
+                     let tr = table.insertRow(-1);
+                     for (let i = 0; i < col.length; i++) {
+                        let th = document.createElement("th");      // table header.
+                        th.innerHTML = col[i];
+                        tr.appendChild(th);
+                     }
+
+                     for (let i = 0; i < res.length; i++) {
+
+                        tr = table.insertRow(-1);
+
+                        for (let j = 0; j < col.length; j++) {
+                           let tabCell = tr.insertCell(-1);
+                           tabCell.innerHTML = res[i][col[j]];
+                        }
+                     }
+                     const divShowData = document.getElementById('showData3');
+                     divShowData.innerHTML = "";
+                     divShowData.appendChild(table);
+
+                  })
+                  .catch(error=>console.log(error));
+                 
                }
                
           
