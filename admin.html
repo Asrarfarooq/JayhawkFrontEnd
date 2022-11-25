@@ -138,13 +138,13 @@
         </form>
 		
         <script>
-            function onSubmit()
+           function onSubmit()
             {
                 
                 var username = document.getElementById('email').value;
                 var password = document.getElementById('password').value;
 
-                const Doctor = {
+                const Admin = {
                 username: username,
                 password: password
             };
@@ -153,7 +153,7 @@
                 headers:{
                     "content-type":"application/json; charset=UTF-8"
                 },
-                 body: JSON.stringify(Doctor),
+                 body: JSON.stringify(Admin),
                  method:"POST"
                 }
                 console.log()
@@ -164,7 +164,7 @@
                 {
                     console.log(res);
 					sessionStorage.setItem("username", username);
-                    window.location.assign("doctor_index.html"); 
+                    window.location.assign("admin_index.html"); 
                 }
                 else
                 {
