@@ -60,30 +60,25 @@
                         <div class="question-answer">
                             <div>
                                 <input type="radio" value="Dr. Watkins" id="radio_1" name="physician"/>
-                                <label for="radio_1" class="radio"><span>Dr. Watkins</span></label>
+                                <label for="radio_1" class="radio"><span>Dr. Watkins (General Physician)</span></label>
                             </div>
                             <div>
                                 <input  type="radio" value="Dr. Jay" id="radio_3" name="physician"/>
-                                <label for="radio_3" class="radio"><span></span>Dr.Jay</label>
+                                <label for="radio_3" class="radio"><span></span>Dr.Jay (General Physician)</label>
                             </div>
                             <div>
                                 <input  type="radio" value="Dr. Hawk" id="radio_4" name="physician"/>
-                                <label for="radio_4" class="radio"><span>Dr. Hawk</span></label>
+                                <label for="radio_4" class="radio"><span>Dr. Hawk (Orthopedics)</span></label>
                             </div>
                             <div>
-                                <input  type="radio" value="Dr. No" id="radio_5" name="physician"/>
-                                <label for="radio_5" class="radio"><span>Dr. No</span></label>
+                                <input  type="radio" value="Dr. NO" id="radio_5" name="physician"/>
+                                <label for="radio_5" class="radio"><span>Dr. No (Opthamology)</span></label>
+                            </div>
+                            <div>
+                                <input  type="radio" value="No Preference" id="radio_6" name="physician"/>
+                                <label for="radio_6" class="radio"><span>No Preference</span></label>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <p>speciality</p>
-                        <select>
-                            <option selected value="" disabled selected></option>
-                            <option id="special" value = "General physician">General Physician</option>
-                            <option value = "Orthopedics">Orthopedics</option>
-                            <option value = "Opthamology">Opthamology</option>
-                        </select>
                     </div>
                     <div class="item">
                         <label for="instructions">Please describe the reason for this visit </label>
@@ -129,7 +124,7 @@
                  }
                  else if(doc_name == "")
                  {
-                         alert("Please fill out the whole form!");    
+                         alert("Choose a doctor");    
                  }
                  else
                  {
@@ -139,7 +134,6 @@
                          date: date,
                          time: time,
                          doc_name: doc_name,
-                         speciality: speciality,
                          instructions: instructions
         
                      };
